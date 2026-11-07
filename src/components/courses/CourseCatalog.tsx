@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { courseCategories, courses, type CourseCategory } from "@/data/courses";
+import { courseCategories } from "@/data/taxonomy";
+import type { Course, CourseCategory } from "@/lib/types";
 import { CourseCard } from "./CourseCard";
 import styles from "./courses.module.css";
 
 type Filter = CourseCategory | "all";
 
-export function CourseCatalog() {
+export function CourseCatalog({ courses }: { courses: Course[] }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [query, setQuery] = useState("");
 

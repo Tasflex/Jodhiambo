@@ -1,0 +1,892 @@
+{
+  "courses": [
+    {
+      "slug": "advanced-actuarial-mathematics",
+      "title": "Advanced Actuarial Mathematics",
+      "category": "actuarial",
+      "level": "Advanced",
+      "icon": "calculator",
+      "summary": "Life contingencies, multiple-state models and the valuation of insurance and annuity contracts.",
+      "overview": "The mathematical core of life insurance and pensions. Starting from survival models, the course builds up to pricing and reserving for life insurance and annuity products, then extends to multiple lives, multiple decrements and multiple-state models used for disability and critical-illness cover.",
+      "outcomes": [
+        "Build and interpret survival models and life tables",
+        "Value life insurance and annuity benefits using actuarial present values",
+        "Calculate premiums and policy reserves, including Thiele's differential equation",
+        "Apply multiple-state and multiple-decrement models to real products"
+      ],
+      "topics": [
+        "Survival models and the force of mortality",
+        "Life tables and selection",
+        "Life insurance and annuity benefits",
+        "Premium calculation principles",
+        "Policy values and reserves",
+        "Multiple lives, multiple decrements and multiple-state models"
+      ],
+      "prerequisites": "Probability, calculus and the theory of interest (financial mathematics).",
+      "audience": [
+        "Actuarial science students in their later undergraduate or postgraduate years",
+        "Candidates preparing for professional life-contingencies examinations",
+        "Analysts in life insurance and pensions who want a rigorous foundation"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 0
+    },
+    {
+      "slug": "advanced-risk-mathematics",
+      "title": "Advanced Risk Mathematics",
+      "category": "actuarial",
+      "level": "Advanced",
+      "icon": "chart-column",
+      "summary": "Loss distributions, aggregate claims and ruin theory for general insurance.",
+      "overview": "How general insurers model claims. The course covers fitting loss distributions, modelling claim frequency and severity together as aggregate claims, the effect of reinsurance and policy limits, and ruin theory for assessing an insurer's long-run solvency.",
+      "outcomes": [
+        "Fit and compare loss distributions for claim severity",
+        "Model aggregate claims using compound distributions",
+        "Quantify the effect of deductibles, limits and reinsurance",
+        "Use ruin theory to reason about insurer solvency"
+      ],
+      "topics": [
+        "Loss distributions and parameter estimation",
+        "Claim frequency models",
+        "Compound and aggregate claim models",
+        "Deductibles, limits and reinsurance",
+        "Credibility theory basics",
+        "Ruin theory"
+      ],
+      "prerequisites": "Probability and statistics, including common distributions and moment-generating functions.",
+      "audience": [
+        "Actuarial and statistics students",
+        "Candidates preparing for risk-modelling examinations",
+        "General insurance pricing and reserving analysts"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 1
+    },
+    {
+      "slug": "actuarial-risk-management",
+      "title": "Actuarial Risk Management",
+      "category": "actuarial",
+      "level": "Advanced",
+      "icon": "shield",
+      "summary": "Identifying, measuring and managing risk across insurance, pensions and financial institutions.",
+      "overview": "The practitioner's view of risk. The course connects actuarial techniques to decisions: how institutions identify and classify risks, measure them with modern risk measures, hold capital against them, match assets to liabilities, and govern the whole process under regulation.",
+      "outcomes": [
+        "Identify and classify the risks facing financial institutions",
+        "Apply risk measures such as VaR and expected shortfall",
+        "Explain approaches to capital, asset-liability management and hedging",
+        "Discuss regulation, governance and enterprise risk management"
+      ],
+      "topics": [
+        "The risk management control cycle",
+        "Risk identification and classification",
+        "Risk measures and economic capital",
+        "Asset-liability management",
+        "Risk mitigation and transfer",
+        "Regulation and governance"
+      ],
+      "prerequisites": "Familiarity with actuarial or financial mathematics is helpful.",
+      "audience": [
+        "Final-year actuarial students",
+        "Candidates preparing for actuarial risk management examinations",
+        "Risk, finance and compliance professionals"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 2
+    },
+    {
+      "slug": "pensions-mathematics",
+      "title": "Pensions Mathematics",
+      "category": "actuarial",
+      "level": "Advanced",
+      "icon": "piggy-bank",
+      "summary": "Valuation and funding of defined benefit and defined contribution pension schemes.",
+      "overview": "The mathematics behind retirement benefits. The course explains how pension schemes are designed, how their liabilities are valued, the funding methods used to set contributions, and how assumptions about salaries, interest and mortality drive the results.",
+      "outcomes": [
+        "Describe defined benefit and defined contribution scheme design",
+        "Value pension liabilities using appropriate decrement models",
+        "Compare funding methods and set contribution rates",
+        "Analyse the effect of assumptions on scheme funding"
+      ],
+      "topics": [
+        "Pension scheme design and benefits",
+        "Service tables and decrements",
+        "Valuation of accrued and future benefits",
+        "Funding methods",
+        "Contribution rate setting",
+        "Assumptions and sensitivity"
+      ],
+      "prerequisites": "Life contingencies (Advanced Actuarial Mathematics or equivalent).",
+      "audience": [
+        "Actuarial students specialising in pensions",
+        "Pension fund trustees and administrators",
+        "Consultants working with retirement benefit schemes"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 3
+    },
+    {
+      "slug": "advanced-financial-economics",
+      "title": "Advanced Financial Economics",
+      "category": "finance",
+      "level": "Advanced",
+      "icon": "coins",
+      "summary": "Asset pricing, portfolio theory and derivative valuation for actuaries and financial analysts.",
+      "overview": "The economic theory that underpins investment and pricing decisions. The course moves from utility and portfolio choice through equilibrium asset pricing models to interest-rate models and the no-arbitrage pricing of options and other derivatives.",
+      "outcomes": [
+        "Apply utility theory and mean-variance portfolio selection",
+        "Use CAPM and multifactor models to explain returns",
+        "Price derivatives by no-arbitrage and risk-neutral methods",
+        "Describe and compare common interest-rate models"
+      ],
+      "topics": [
+        "Utility theory and risk aversion",
+        "Mean-variance portfolio theory",
+        "Asset pricing models (CAPM, APT)",
+        "Efficient markets",
+        "Option pricing: binomial and Black-Scholes",
+        "Interest-rate models"
+      ],
+      "prerequisites": "Probability, calculus and basic financial mathematics.",
+      "audience": [
+        "Actuarial, finance and economics students",
+        "Candidates preparing for financial economics examinations",
+        "Investment and treasury analysts"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 4
+    },
+    {
+      "slug": "advanced-financial-modelling",
+      "title": "Advanced Financial Modelling",
+      "category": "finance",
+      "level": "Intermediate",
+      "icon": "file-invoice",
+      "summary": "Building robust financial models for valuation, forecasting and decision support.",
+      "overview": "A practical course in building models that decision-makers can trust. It covers model structure, forecasting financial statements, valuation, scenario and sensitivity analysis, and the checks that keep a model accurate and auditable.",
+      "outcomes": [
+        "Structure clear, auditable financial models",
+        "Forecast financial statements from sound assumptions",
+        "Value businesses and projects using discounted cash flow",
+        "Run scenario and sensitivity analysis to support decisions"
+      ],
+      "topics": [
+        "Model design principles",
+        "Forecasting the three financial statements",
+        "Discounted cash flow valuation",
+        "Scenario and sensitivity analysis",
+        "Risk and uncertainty in models",
+        "Model review and validation"
+      ],
+      "prerequisites": "Basic accounting and spreadsheet skills.",
+      "audience": [
+        "Finance, accounting and actuarial students",
+        "Analysts in banking, investment and corporate finance",
+        "Entrepreneurs preparing projections for investors"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 5
+    },
+    {
+      "slug": "financial-time-series-and-econometrics",
+      "title": "Financial Time Series and Econometrics Modelling",
+      "category": "finance",
+      "level": "Advanced",
+      "icon": "chart-line",
+      "summary": "Time series and econometric techniques for financial and economic data.",
+      "overview": "Methods for data that unfold over time. The course covers stationarity and ARIMA models, volatility modelling with ARCH and GARCH, regression and panel econometrics, and forecasting, with applications to markets and macroeconomic data.",
+      "outcomes": [
+        "Test for stationarity and fit ARIMA models",
+        "Model time-varying volatility with ARCH and GARCH",
+        "Estimate and interpret econometric regression models",
+        "Produce and evaluate forecasts"
+      ],
+      "topics": [
+        "Stationarity and autocorrelation",
+        "ARMA and ARIMA models",
+        "Volatility models: ARCH and GARCH",
+        "Regression and its assumptions",
+        "Panel data methods",
+        "Forecasting and evaluation"
+      ],
+      "prerequisites": "Statistics and linear regression.",
+      "audience": [
+        "Postgraduate students in finance, economics and statistics",
+        "Researchers working with market or macroeconomic data",
+        "Quantitative and risk analysts"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 6
+    },
+    {
+      "slug": "stochastic-processes-modelling",
+      "title": "Stochastic Processes Modelling",
+      "category": "data",
+      "level": "Advanced",
+      "icon": "diagram",
+      "summary": "Markov chains, Poisson processes and Brownian motion with actuarial and financial applications.",
+      "overview": "The language of randomness over time. The course develops Markov chains, counting processes, continuous-time Markov models and Brownian motion, and shows how they model insurance claims, health states, epidemics and asset prices.",
+      "outcomes": [
+        "Classify stochastic processes and their properties",
+        "Analyse discrete- and continuous-time Markov chains",
+        "Model claim arrivals with Poisson and counting processes",
+        "Use Brownian motion and simple stochastic calculus in finance"
+      ],
+      "topics": [
+        "Principles of stochastic processes",
+        "Discrete-time Markov chains",
+        "Poisson and counting processes",
+        "Continuous-time Markov models",
+        "Brownian motion",
+        "Applications in insurance, health and finance"
+      ],
+      "prerequisites": "Probability theory and calculus.",
+      "audience": [
+        "Actuarial science and statistics students",
+        "Candidates preparing for stochastic-modelling examinations",
+        "Researchers modelling risk, health or epidemics"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 7
+    },
+    {
+      "slug": "statistical-machine-learning-data-analytics",
+      "title": "Statistical Machine Learning & Data Analytics",
+      "category": "data",
+      "level": "Intermediate",
+      "icon": "brain",
+      "summary": "Supervised and unsupervised learning methods for prediction and insight from data.",
+      "overview": "Machine learning grounded in statistics. The course covers the full workflow, from preparing data through regression, classification, tree-based ensembles and clustering, to validating models properly so they generalise to new data.",
+      "outcomes": [
+        "Prepare and explore data for modelling",
+        "Build regression and classification models",
+        "Use tree-based ensembles and clustering methods",
+        "Evaluate models with cross-validation and appropriate metrics"
+      ],
+      "topics": [
+        "The machine learning workflow",
+        "Regression and regularisation",
+        "Classification methods",
+        "Decision trees, random forests and boosting",
+        "Clustering and dimension reduction",
+        "Model evaluation and selection"
+      ],
+      "prerequisites": "Introductory statistics; some programming experience helps.",
+      "audience": [
+        "Students in statistics, actuarial science and data science",
+        "Analysts moving into predictive modelling",
+        "Researchers applying machine learning to their data"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 8
+    },
+    {
+      "slug": "statistical-modelling",
+      "title": "Statistical Modelling",
+      "category": "data",
+      "level": "Intermediate",
+      "icon": "chart-pie",
+      "summary": "Generalised linear models and statistical inference for real-world data.",
+      "overview": "The core toolkit for drawing conclusions from data. The course reviews estimation and hypothesis testing, then develops linear and generalised linear models for continuous, count and binary outcomes, with careful attention to diagnostics and interpretation.",
+      "outcomes": [
+        "Estimate parameters and test hypotheses correctly",
+        "Fit and interpret linear regression models",
+        "Use generalised linear models for counts and binary data",
+        "Check model assumptions with diagnostics"
+      ],
+      "topics": [
+        "Estimation and inference",
+        "Hypothesis testing",
+        "Linear regression",
+        "Generalised linear models",
+        "Model diagnostics",
+        "Applications in insurance and research"
+      ],
+      "prerequisites": "Probability and introductory statistics.",
+      "audience": [
+        "Undergraduate and postgraduate students",
+        "Candidates preparing for statistics examinations",
+        "Researchers who analyse quantitative data"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 9
+    },
+    {
+      "slug": "research-and-data-analysis",
+      "title": "Research and Data Analysis",
+      "category": "data",
+      "level": "Intermediate",
+      "icon": "search",
+      "summary": "Research design, data collection and analysis for theses, projects and policy work.",
+      "overview": "A guide from research question to defended findings. The course covers research design, sampling and data collection, choosing and running the right quantitative analysis, and presenting results clearly in theses, reports and policy briefs.",
+      "outcomes": [
+        "Design a sound research study around a clear question",
+        "Choose sampling and data collection methods",
+        "Select and run appropriate quantitative analyses",
+        "Report findings clearly for academic and policy audiences"
+      ],
+      "topics": [
+        "Research questions and design",
+        "Sampling and data collection",
+        "Data cleaning and preparation",
+        "Descriptive and inferential analysis",
+        "Interpreting results",
+        "Writing and presenting findings"
+      ],
+      "prerequisites": "None beyond basic statistics.",
+      "audience": [
+        "Master's and PhD candidates preparing theses",
+        "Researchers and policy analysts",
+        "Monitoring and evaluation professionals"
+      ],
+      "price_kes": 5000,
+      "access_days": 365,
+      "published": true,
+      "sort_order": 10
+    }
+  ],
+  "plans": [
+    {
+      "id": "monthly",
+      "name": "1 Month",
+      "access_days": 30,
+      "price_kes": 1500,
+      "blurb": "Short revision sprint before an exam.",
+      "featured": false,
+      "active": true,
+      "sort_order": 0
+    },
+    {
+      "id": "quarterly",
+      "name": "3 Months",
+      "access_days": 90,
+      "price_kes": 4000,
+      "blurb": "A full semester of study.",
+      "featured": true,
+      "active": true,
+      "sort_order": 1
+    },
+    {
+      "id": "annual",
+      "name": "12 Months",
+      "access_days": 365,
+      "price_kes": 12000,
+      "blurb": "Best value for a full year of exams.",
+      "featured": false,
+      "active": true,
+      "sort_order": 2
+    }
+  ],
+  "research_papers": [
+    {
+      "title": "Pathways to green hydrogen production as a sustainable energy solution in Kenya by 2040",
+      "venue": "Springer",
+      "year": 2026,
+      "doi": "10.1007/s43937-025-00098-0",
+      "tags": [
+        "Sustainable Energy",
+        "Green Hydrogen"
+      ]
+    },
+    {
+      "title": "Robotic Medical Services and the Future of Healthcare in Kenya",
+      "venue": "Healthcare Technology",
+      "year": 2024,
+      "doi": null,
+      "tags": [
+        "Healthcare",
+        "Robotics"
+      ]
+    },
+    {
+      "title": "The Role of Artificial Intelligence in Kenya's Environmental Diplomacy: A Foresight Approach, by 2040",
+      "venue": "Environmental Policy",
+      "year": 2024,
+      "doi": null,
+      "tags": [
+        "AI",
+        "Environmental Policy"
+      ]
+    },
+    {
+      "title": "Role of Artificial Intelligence in Robotic Medical Services: Kenyan Healthcare Foresight",
+      "venue": "SSRN",
+      "year": 2024,
+      "doi": "10.2139/ssrn.4808101",
+      "tags": [
+        "Healthcare",
+        "AI"
+      ]
+    },
+    {
+      "title": "Pricing of European Call Options Using Generalized Wishart Processes",
+      "venue": "Mathematics and Systems Science",
+      "year": 2023,
+      "doi": "10.54517/mss.v1i1.2189",
+      "tags": [
+        "Quantitative Finance"
+      ]
+    },
+    {
+      "title": "Deep Learning Incorporated Buhlmann Credibility in the Modified Lee-Carter Mortality Model",
+      "venue": "Mathematical Problems in Engineering",
+      "year": 2023,
+      "doi": null,
+      "tags": [
+        "Mortality Modeling",
+        "AI Applications"
+      ]
+    },
+    {
+      "title": "Poisson Incorporated Credibility Regression Modelling of Systematic Mortality Risk for Populations with Finite Data",
+      "venue": "Mathematical Problems in Engineering",
+      "year": 2022,
+      "doi": null,
+      "tags": [
+        "Risk Modeling"
+      ]
+    },
+    {
+      "title": "Bühlmann credibility approach to systematic mortality risk modeling for sub-Saharan Africa populations (Kenya)",
+      "venue": "Research in Mathematics",
+      "year": 2022,
+      "doi": null,
+      "tags": [
+        "African Demographics"
+      ]
+    },
+    {
+      "title": "A Deep Learning Integrated Cairns-Blake-Dowd (CBD) Systematic Mortality Risk Model",
+      "venue": "Journal of Risk and Financial Management",
+      "year": 2021,
+      "doi": null,
+      "tags": [
+        "Machine Learning"
+      ]
+    },
+    {
+      "title": "Modeling Kenyan economic impact of coronavirus in Kenya using discrete-time Markov chains",
+      "venue": "Journal of Finance and Economics",
+      "year": 2021,
+      "doi": null,
+      "tags": [
+        "Pandemic Economics"
+      ]
+    },
+    {
+      "title": "Modeling of Returns of Nairobi Securities Exchange 20 Share Index Using Log-Normal Distribution",
+      "venue": "Journal of Financial Economics",
+      "year": 2020,
+      "doi": null,
+      "tags": [
+        "Financial Markets"
+      ]
+    },
+    {
+      "title": "Modelling of COVID-19 transmission in Kenya using compound Poisson regression model",
+      "venue": "Journal of Advances in Mathematics and Computer Science",
+      "year": 2020,
+      "doi": null,
+      "tags": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "title": "Stochastic Modeling and Prediction of the COVID-19 Spread in Kenya",
+      "venue": "Engineering Mathematics",
+      "year": 2020,
+      "doi": null,
+      "tags": [
+        "Stochastic Models"
+      ]
+    },
+    {
+      "title": "Modeling of COVID-19 Transmission under Markov Chains in Uganda",
+      "venue": "African Journal of Health Sciences",
+      "year": 2020,
+      "doi": null,
+      "tags": [
+        "Markov Models"
+      ]
+    }
+  ],
+  "media_articles": [
+    {
+      "title": "Address key CBC implementation guidelines gaps for senior schools",
+      "outlet": "Business Daily Africa",
+      "published_on": "2025-04-09",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/address-key-cbc-implementation-guidelines-gaps-4994922"
+    },
+    {
+      "title": "Mathematics needs to be a compulsory subject",
+      "outlet": "Daily Nation",
+      "published_on": "2025-03-17",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/mathematics-needs-to-be-a-compulsory-subject-4967282"
+    },
+    {
+      "title": "Why Kenya needs to enact an honorary degree policy to tame rogue awards",
+      "outlet": "Citizen Digital",
+      "published_on": "2025-01-16",
+      "url": "https://citizen.digital/wananchi-reporting/why-kenya-needs-to-enact-an-honorary-degree-policy-to-tame-rogue-awards-n355977"
+    },
+    {
+      "title": "Solutions to the shortage of science teachers in Kenya",
+      "outlet": "Business Daily Africa",
+      "published_on": "2024-10-29",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/solutions-to-the-shortage-of-science-teachers-in-kenya-4804116"
+    },
+    {
+      "title": "Bridge AI gap in universities",
+      "outlet": "Daily Nation",
+      "published_on": "2024-10-22",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/bridge-ai-gap-in-universities-4799990"
+    },
+    {
+      "title": "Promoting Gender Equity and Inclusivity in the Employment Sector in Kenya",
+      "outlet": "KIPPRA",
+      "published_on": "2024-09-27",
+      "url": "https://kippra.or.ke/promoting-gender-equity-and-inclusivity-in-the-employment-sector-in-kenya/"
+    },
+    {
+      "title": "How Kenya can seize opportunity to grow exports to EAC countries",
+      "outlet": "Business Daily Africa",
+      "published_on": "2024-08-25",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/how-kenya-can-seize-opportunity-to-grow-exports-in-eac-4738740"
+    },
+    {
+      "title": "How Kenya can harness AI power to curb road carnage",
+      "outlet": "Business Daily Africa",
+      "published_on": "2024-03-25",
+      "url": "https://www.businessdailyafrica.com/bd/data-hub/how-kenya-can-harness-ai-power-to-curb-road-carnage--4568252"
+    },
+    {
+      "title": "How AI will transform electoral malpractices",
+      "outlet": "Daily Nation",
+      "published_on": "2024-03-22",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/how-ai-will-transform-electoral-malpractices-4564632"
+    },
+    {
+      "title": "How AI has transformed exam cheating in universities",
+      "outlet": "Business Daily Africa",
+      "published_on": "2024-03-20",
+      "url": "https://www.businessdailyafrica.com/bd/corporate/technology/how-ai-has-transformed-exam-cheating-in-universities--4562188"
+    },
+    {
+      "title": "Inject 4IR technologies into Senior Secondary School curriculum",
+      "outlet": "Citizen Digital",
+      "published_on": "2024-03-03",
+      "url": "https://www.citizen.digital/wananchi-reporting/wananchi-opinion-inject-4ir-technologies-into-senior-secondary-school-curriculum-n337762"
+    },
+    {
+      "title": "How to tame endemic fake papers vice in Kenya",
+      "outlet": "Business Daily Africa",
+      "published_on": "2024-03-01",
+      "url": "https://www.businessdailyafrica.com/bd/data-hub/how-to-end-endemic-fake-papers-vice-in-kenya--4541010"
+    },
+    {
+      "title": "Actuaries can play a huge role in solving our economic woes",
+      "outlet": "Daily Nation",
+      "published_on": "2024-02-25",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/actuaries-can-play-a-huge-role-in-solving-our-economic-woes-4502292"
+    },
+    {
+      "title": "Why Kenyan universities should publish annual lists of graduates",
+      "outlet": "Citizen Digital",
+      "published_on": "2024-02-21",
+      "url": "https://www.citizen.digital/wananchi-reporting/wananchi-opinion-why-kenyan-universities-should-publish-annual-lists-of-graduates-n337133"
+    },
+    {
+      "title": "We need a national agency to run bursaries and scholarships",
+      "outlet": "Daily Nation",
+      "published_on": "2024-02-07",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/we-need-a-national-agency-to-run-bursaries-and-scholarships-4516394"
+    },
+    {
+      "title": "Make Open University of Kenya accessible to all citizens in 2024",
+      "outlet": "Business Daily Africa",
+      "published_on": "2024-01-12",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/make-open-university-of-kenya-accessible-to-all-citizens-4489374"
+    },
+    {
+      "title": "Students who scored As from village schools deserve more flowers",
+      "outlet": "Citizen Digital",
+      "published_on": "2024-01-11",
+      "url": "https://www.citizen.digital/wananchi-reporting/opinion-students-who-scored-as-from-village-schools-deserve-more-flowers-n334576"
+    },
+    {
+      "title": "Economic landscape in post-final Eurobond debt payment shocks",
+      "outlet": "Daily Nation",
+      "published_on": "2024-01-03",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/economic-landscape-in-post-final-eurobond-debt-payment-shocks-4480616"
+    },
+    {
+      "title": "New CBK rate ripple effects to hand households a forgettable Christmas",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-12-22",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/new-cbk-rate-ripple-effects-to-hand-households-christmas--4471366"
+    },
+    {
+      "title": "Kenya has one of the highest PhD dropouts, and students take up to 15 years studying",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-11-16",
+      "url": "https://www.citizen.digital/wananchi-reporting/opinion-kenya-has-one-of-the-highest-phd-dropouts-and-students-up-to-15-years-studying-n331461"
+    },
+    {
+      "title": "Kenya's Dollar Volatility problem has a cure",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-11-14",
+      "url": "https://www.citizen.digital/wananchi-reporting/wananchi-opinion-kenyas-dollar-volatility-problem-has-a-cure-n331280"
+    },
+    {
+      "title": "Charting Career Paths for PhD Graduates Beyond Academia",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-10-24",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/charting-career-paths-for-phd-graduates-beyond-academia--4412050"
+    },
+    {
+      "title": "Let's use AI tools to transform research in Kenyan universities",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-10-23",
+      "url": "https://citizen.digital/wananchi-reporting/wananchi-opinion-lets-use-ai-tools-to-transform-research-in-kenyan-universities-n329845"
+    },
+    {
+      "title": "How to bridge wide PhD gap among women",
+      "outlet": "Daily Nation",
+      "published_on": "2023-10-13",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/how-to-bridge-wide-phd-gap-among-women-4399096"
+    },
+    {
+      "title": "How to Increase Uptake of Research by Kenyan Universities",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-10-04",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/how-to-increase-uptake-of-research-by-kenyan-universities--4389896"
+    },
+    {
+      "title": "It's Wrong to Ethnicise VC Appointments in Kenyan Universities",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-10-03",
+      "url": "https://www.citizen.digital/wananchi-reporting/opinion-its-wrong-to-ethnicise-vc-appointments-in-kenyan-universities-n328588"
+    },
+    {
+      "title": "Short-time measures in taming fuel prices for the Kenyan consumer",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-09-20",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/short-time-measures-in-taming-fuel-prices-for-kenyan-consumer--4374206"
+    },
+    {
+      "title": "Kenyan universities must embrace AI or perish in “self-denial”",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-09-19",
+      "url": "https://www.citizen.digital/wananchi-reporting/kenyan-universities-must-embrace-ai-or-perish-in-self-denial-n327660"
+    },
+    {
+      "title": "Reform varsity research policies",
+      "outlet": "Daily Nation",
+      "published_on": "2023-08-31",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/reform-varsity-research-policies-4352838"
+    },
+    {
+      "title": "New varsity model will push students to cheaper courses",
+      "outlet": "Daily Nation",
+      "published_on": "2023-08-25",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/new-varsity-model-will-push-students-to-cheaper-courses-4346340"
+    },
+    {
+      "title": "Reform fuel subsidies to cushion them from politics, achieve goals",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-08-25",
+      "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/reform-fuel-subsidies-to-cushion-them-from-politics--4346106"
+    },
+    {
+      "title": "New varsity funding model pushes students to cheaper courses at the expense of “Ability”",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-08-16",
+      "url": "https://www.citizen.digital/wananchi-reporting/new-varsity-funding-model-pushes-students-to-cheaper-courses-at-the-expense-of-ability-n325605"
+    },
+    {
+      "title": "How borrowers can survive higher interest rate cycles",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-08-11",
+      "url": "https://www.businessdailyafrica.com/bd/data-hub/how-borrowers-can-survive-higher-interest-rate-cycles--4332458"
+    },
+    {
+      "title": "Academic Clock: Age crisis of PhD graduates in Kenyan Universities Worrying",
+      "outlet": "Citizen Digital",
+      "published_on": "2023-08-10",
+      "url": "https://www.citizen.digital/wananchi-reporting/academic-clock-age-crisis-of-phd-graduates-in-kenyan-universities-worrying-n325258"
+    },
+    {
+      "title": "How Kenya can counter global oil price volatility",
+      "outlet": "Business Daily Africa",
+      "published_on": "2023-08-02",
+      "url": "https://www.businessdailyafrica.com/bd/data-hub/how-kenya-can-counter-global-oil-price-volatility--4323138"
+    },
+    {
+      "title": "Need for policy reforms in varsity funding model",
+      "outlet": "Daily Nation",
+      "published_on": "2023-07-25",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/need-for-policy-reforms-in-varsity-funding-model-4314622"
+    }
+  ],
+  "books": [
+    {
+      "title": "Artificial Intelligence in Actuarial Science within Sub-Saharan Africa",
+      "image_url": "/img/books/ai-in-actuarial-science.jpg",
+      "amazon_url": "https://www.amazon.com/Artificial-Intelligence-Actuarial-Science-Sub-Saharan-ebook/dp/B0D5YRFCTJ",
+      "sort_order": 0
+    },
+    {
+      "title": "ChatGPT Billionaire's Paradise: From Grass to Grace Practical Guide",
+      "image_url": "/img/books/chatgpt-billionaires-paradise.jpg",
+      "amazon_url": "https://www.amazon.com/ChatGPT-Billionaires-Paradise-Practical-Sub-Saharan-ebook/dp/B0C8W5MVJ8",
+      "sort_order": 1
+    },
+    {
+      "title": "Stochastic Systematic Mortality Risk Modeling Under Collateral Data and Actuarial Applications",
+      "image_url": "/img/books/stochastic-systematic-mortality.jpg",
+      "amazon_url": "https://www.amazon.com/STOCHASTIC-SYSTEMATIC-MORTALITY-COLLATERAL-APPLICATIONS/dp/9994987313",
+      "sort_order": 2
+    }
+  ],
+  "gallery_items": [
+    {
+      "image_url": "/img/gallery/lecture-session.jpg",
+      "alt": "Dr. Odhiambo lecturing a university class",
+      "title": "Lecture Session",
+      "caption": "Engaging students in advanced actuarial concepts at university",
+      "category": "teaching",
+      "sort_order": 0
+    },
+    {
+      "image_url": "/img/gallery/keynote-address.jpg",
+      "alt": "Dr. Odhiambo delivering a keynote address to a conference audience",
+      "title": "Keynote Address",
+      "caption": "Presenting at the International Actuarial Conference",
+      "category": "presentations",
+      "sort_order": 1
+    },
+    {
+      "image_url": "/img/gallery/award-recognition.jpg",
+      "alt": "Dr. Odhiambo receiving the Outstanding Actuary in Academia Award",
+      "title": "Award Recognition",
+      "caption": "Receiving the Outstanding Actuary in Academia Award",
+      "category": "awards",
+      "sort_order": 2
+    },
+    {
+      "image_url": "/img/gallery/student-seminar.jpg",
+      "alt": "Dr. Odhiambo leading a student seminar",
+      "title": "Student Seminar",
+      "caption": "Leading a discussion on financial modelling techniques",
+      "category": "teaching",
+      "sort_order": 3
+    },
+    {
+      "image_url": "/img/gallery/panel-education-reform.jpg",
+      "alt": "Panel discussion on education reforms",
+      "title": "Panel Discussion",
+      "caption": "Participating in a policy forum on education reforms",
+      "category": "presentations",
+      "sort_order": 4
+    },
+    {
+      "image_url": "/img/gallery/digital-insurance-forum.jpg",
+      "alt": "Dr. Odhiambo speaking at the East African Digital Insurance Forum",
+      "title": "Digital Insurance Forum",
+      "caption": "Training insurance executives on predictive modelling techniques at the East African Digital Insurance Forum",
+      "category": "presentations",
+      "sort_order": 5
+    },
+    {
+      "image_url": "/img/gallery/addressing-students.jpg",
+      "alt": "Dr. Odhiambo addressing a gathering of students",
+      "title": "Addressing Students",
+      "caption": "“Your first failed exam isn't a verdict, it's your most valuable case study.”",
+      "category": "teaching",
+      "sort_order": 6
+    },
+    {
+      "image_url": "/img/gallery/panel-economic-reform.jpg",
+      "alt": "Panel discussion on economic reforms",
+      "title": "Panel Discussion",
+      "caption": "Participating in a policy forum on economic reforms",
+      "category": "presentations",
+      "sort_order": 7
+    },
+    {
+      "image_url": "/img/gallery/policy-panel.jpg",
+      "alt": "Experts seated on a policy panel at a national conference",
+      "title": "Policy Panel Discussion",
+      "caption": "Discussing economic policy reforms with fellow experts at a national conference",
+      "category": "presentations",
+      "sort_order": 8
+    },
+    {
+      "image_url": "/img/gallery/kicd-workshop.jpg",
+      "alt": "Curriculum development workshop at the Kenya Institute of Curriculum Development",
+      "title": "Curriculum Development Workshop",
+      "caption": "Collaborating with colleagues at the Kenya Institute of Curriculum Development on national educational frameworks",
+      "category": "events",
+      "sort_order": 9
+    },
+    {
+      "image_url": "/img/gallery/graduation.jpg",
+      "alt": "Dr. Odhiambo at his PhD and MSc graduation",
+      "title": "PhD and MSc Graduation",
+      "caption": "Milestone academic achievements",
+      "category": "awards",
+      "sort_order": 10
+    },
+    {
+      "image_url": "/img/gallery/collaboration.jpg",
+      "alt": "Dr. Odhiambo greeting actuaries at an international gathering",
+      "title": "Collaboration",
+      "caption": "Interacting with actuaries from different continents",
+      "category": "events",
+      "sort_order": 11
+    },
+    {
+      "image_url": "/img/gallery/gala-dinner.jpg",
+      "alt": "Actuarial industry gala dinner",
+      "title": "Gala Dinner",
+      "caption": "Celebrating excellence in actuarial science at the industry gala dinner",
+      "category": "events",
+      "sort_order": 12
+    },
+    {
+      "image_url": "/img/gallery/department-celebration.jpg",
+      "alt": "Department members celebrating together",
+      "title": "Department Celebration",
+      "caption": "Celebrating another successful academic year with the team",
+      "category": "events",
+      "sort_order": 13
+    },
+    {
+      "image_url": "/img/gallery/tree-planting.jpg",
+      "alt": "Dr. Odhiambo planting a tree",
+      "title": "Inaugural Planting",
+      "caption": "Launching the department's sustainability initiative with the first ceremonial tree",
+      "category": "events",
+      "sort_order": 14
+    }
+  ]
+}

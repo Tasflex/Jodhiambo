@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { FaArrowUpRightFromSquare, FaCheck, FaMagnifyingGlass, FaQuoteLeft } from "react-icons/fa6";
-import { AUTHOR, researchPapers, type ResearchPaper } from "@/data/research";
+import type { ResearchPaper } from "@/lib/types";
 import styles from "./publications.module.css";
 
-const allTags = Array.from(new Set(researchPapers.flatMap((p) => p.tags))).sort();
+/** Every paper is by Dr. Odhiambo as sole author. */
+const AUTHOR = "Odhiambo, J.O.";
 
 function citation(p: ResearchPaper) {
   return `${AUTHOR} (${p.year}). ${p.title}. ${p.venue}.${p.doi ? ` https://doi.org/${p.doi}` : ""}`;
@@ -33,7 +34,8 @@ function CiteButton({ paper }: { paper: ResearchPaper }) {
   );
 }
 
-export function ResearchExplorer() {
+export function ResearchExplorer({ papers: researchPapers }: { papers: ResearchPaper[] }) {
+  const allTags = Array.from(new Set(researchPapers.flatMap((p) => p.tags))).sort();
   const [tag, setTag] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
@@ -87,7 +89,7 @@ export function ResearchExplorer() {
               {visible
                 .filter((p) => p.year === year)
                 .map((p, i) => (
-                  <li key={p.title} className={styles.paper} data-reveal style={{ "--reveal-i": i % 4 } as React.CSSProperties}>
+                  <li key={p.id} className={styles.paper} data-reveal style={{ "--reveal-i": i % 4 } as React.CSSProperties}>
                     <h3>{p.title}</h3>
                     <p className={styles.paperMeta}>
                       <span>{AUTHOR}</span>

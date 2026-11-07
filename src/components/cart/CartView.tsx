@@ -3,30 +3,28 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { FaCrown, FaTrashCan } from "react-icons/fa6";
-import { getCourse } from "@/data/courses";
 import { describeAccess, type Product } from "@/lib/catalog";
+import { CourseIcon } from "@/lib/course-icons";
 import { cart, useCart, useHydrated } from "@/lib/cart-store";
 import { formatKes } from "@/lib/format";
 import { priceItems } from "@/lib/pricing";
 import styles from "./cart.module.css";
 
 function ProductIcon({ product }: { product: Product }) {
-  if (product.kind === "plan") return <FaCrown aria-hidden />;
-  const Icon = getCourse(product.id.slice("course:".length))?.icon;
-  return Icon ? <Icon aria-hidden /> : null;
+  return product.kind === "plan" ? <FaCrown aria-hidden /> : <CourseIcon name={product.icon ?? "book"} />;
 }
 
-export function CartView() {
+export function CartView({ products }: { products: Product[] }) {
   const items = useCart();
   const hydrated = useHydrated();
-  const { lines, totalKes } = priceItems(items);
+  const { lines, totalKes } = priceItems(items, products);
   const hasPlan = lines.some((l) => l.kind === "plan");
   const hasCourses = lines.some((l) => l.kind === "course");
 
   // Drop products that no longer exist in the catalogue (e.g. renamed or retired).
   useEffect(() => {
-    priceItems(items).unknown.forEach((id) => cart.remove(id));
-  }, [items]);
+    priceItems(items, products).unknown.forEach((id) => cart.remove(id));
+  }, [items, products]);
 
   if (!hydrated) {
     return <p className="text-center">Loading your cart…</p>;

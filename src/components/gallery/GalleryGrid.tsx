@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { galleryCategories, galleryItems, type GalleryCategory } from "@/data/gallery";
+import { galleryCategories } from "@/data/taxonomy";
+import type { GalleryCategory, GalleryItem } from "@/lib/types";
 import styles from "./gallery.module.css";
 
 type Filter = GalleryCategory | "all";
 
-export function GalleryGrid() {
+export function GalleryGrid({ items: galleryItems }: { items: GalleryItem[] }) {
   const [filter, setFilter] = useState<Filter>("all");
   const visible = filter === "all" ? galleryItems : galleryItems.filter((i) => i.category === filter);
   const options: { value: Filter; label: string }[] = [{ value: "all", label: "All" }, ...galleryCategories];
@@ -31,7 +32,7 @@ export function GalleryGrid() {
       <ul role="list" className={styles.grid}>
         {visible.map((item, i) => (
           <li
-            key={item.src}
+            key={item.id}
             className={i % 5 === 0 ? styles.tall : undefined}
             data-reveal="zoom"
             style={{ "--reveal-i": i % 4 } as React.CSSProperties}

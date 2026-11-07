@@ -692,3 +692,14 @@ textarea.form-control {
 [data-theme="dark"] .theme-icon-moon {
   display: none;
 }
+
+/* Spinner icon */
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

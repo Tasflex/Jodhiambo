@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { site } from "@/data/site";
 import type { OrderItem } from "@/lib/orders";
 import { initializeTransaction } from "@/lib/paystack";
+import { getProducts } from "@/lib/content";
 import { priceItems } from "@/lib/pricing";
 import { checkoutSchema } from "@/lib/schemas";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
@@ -23,7 +24,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, message: "Your cart is empty." }, { status: 400 });
   }
 
-  const { lines, unknown, totalKes } = priceItems(parsed.data.items);
+  // Fresh catalogue from the database: prices are never taken from the request.
+  const { lines, unknown, totalKes } = priceItems(parsed.data.items, await getProducts());
   if (unknown.length > 0 || lines.length === 0) {
     return NextResponse.json(
       { ok: false, message: "Some items in your cart are no longer available. Please review your cart." },
@@ -43,6 +45,7 @@ export async function POST(request: Request) {
   const db = createSupabaseAdminClient();
   const { error } = await db.from("orders").insert({
     user_id: user.id,
+    customer_email: user.email,
     reference,
     items,
     amount_kes: totalKes,

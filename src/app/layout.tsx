@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { ScrollEffects } from "@/components/layout/ScrollEffects";
 import { themeScript } from "@/components/layout/theme-script";
 import { site } from "@/data/site";
 import "./globals.css";
@@ -50,13 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <a href="#main" className="skip-link">
-          Skip to content
-        </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
-        <ScrollEffects />
+        {children}
 
         {loadAnalytics && (
           <>

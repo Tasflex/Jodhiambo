@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaLock } from "react-icons/fa6";
-import { describeAccess } from "@/lib/catalog";
+import { describeAccess, type Product } from "@/lib/catalog";
 import { useCart, useHydrated } from "@/lib/cart-store";
 import { formatKes } from "@/lib/format";
 import { priceItems } from "@/lib/pricing";
@@ -11,10 +11,10 @@ import styles from "./cart.module.css";
 
 type ApiResult = { ok: true; authorizationUrl: string } | { ok: false; message: string };
 
-export function CheckoutForm({ email }: { email: string }) {
+export function CheckoutForm({ email, products }: { email: string; products: Product[] }) {
   const items = useCart();
   const hydrated = useHydrated();
-  const { lines, totalKes } = priceItems(items);
+  const { lines, totalKes } = priceItems(items, products);
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 

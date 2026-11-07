@@ -47,11 +47,24 @@ cp .env.example .env.local     # fill in the values (see comments in the file)
    (Locally, the redirect back to `/checkout/verify` confirms payments without a webhook.)
 3. Make sure KES and M-Pesa are enabled on your Paystack account.
 
-### 4. Add course materials
+### 4. Content and the admin dashboard
 
-1. **Storage → materials**: upload a PDF, e.g. `pensions-mathematics/01-introduction.pdf`.
-2. **Table editor → materials**: add a row with `course_slug` (a slug from `src/data/courses.ts`), `title`,
-   `storage_path` (the path you uploaded to) and `sort_order`.
+1. In **SQL Editor**, also run `supabase/migrations/0002_admin_content.sql` (content tables + image bucket).
+2. Load the starting content once: `node scripts/seed-content.mjs` (safe to re-run; never overwrites edits).
+3. Put your email in `ADMIN_EMAILS`, sign in on the site, and open **/admin**.
+
+Everything is managed from the dashboard:
+
+| Section | What you can do |
+| ------- | --------------- |
+| Dashboard | Revenue, orders, students, best sellers |
+| Orders | Filter by status, re-check a payment with Paystack |
+| Students | See who has access; grant or revoke access (e.g. offline M-Pesa payments) |
+| Courses & PDFs | Add/edit courses and prices, publish/unpublish, upload, rename, reorder and delete PDFs |
+| Plans | All-Access pass prices and lengths |
+| Research, Articles, Books, Gallery | Add, edit and delete, with image uploads |
+
+Saving anything refreshes the public site immediately.
 
 ### 5. Run
 
@@ -103,4 +116,5 @@ public/img/       Images (hero, about, books/, gallery/)
 - [ ] Set up Resend (or swap `src/lib/mailer.ts`) so contact messages and payment notifications are delivered.
 - [ ] Customise the Supabase sign-in email template with your branding.
 - [ ] Confirm the Bluesky handle in `src/data/site.ts`.
-- [ ] Confirm the TODOs in `src/data/research.ts` (journal names) and `src/data/articles.ts` (one date).
+- [ ] In the dashboard, check research venues (some read like subject areas, not journal names) and the date of
+      "Actuaries can play a huge role in solving our economic woes" (probably late January 2024, not 25 February).

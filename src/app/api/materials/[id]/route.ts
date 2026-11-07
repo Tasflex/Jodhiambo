@@ -33,7 +33,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     .maybeSingle<Pick<MaterialRow, "course_slug" | "storage_path">>();
   if (!material) return new NextResponse("Not found", { status: 404, headers: noStore });
 
-  if (!canAccessCourse(await getActiveEntitlements(), material.course_slug)) {
+  if (!canAccessCourse(await getActiveEntitlements(), material.course_slug, user)) {
     return new NextResponse("Your access to this course has ended.", { status: 403, headers: noStore });
   }
 

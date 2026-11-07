@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaArrowUpRightFromSquare, FaMagnifyingGlass } from "react-icons/fa6";
-import { mediaArticles, outlets, type Outlet } from "@/data/articles";
+import type { MediaArticle } from "@/lib/types";
 import { formatDate } from "@/lib/format";
 import styles from "./publications.module.css";
 
@@ -14,8 +14,8 @@ const initials = (o: string) =>
     .join("")
     .slice(0, 3);
 
-export function ArticleList() {
-  const [outlet, setOutlet] = useState<Outlet | "all">("all");
+export function ArticleList({ articles: mediaArticles, outlets }: { articles: MediaArticle[]; outlets: string[] }) {
+  const [outlet, setOutlet] = useState<string>("all");
   const [query, setQuery] = useState("");
 
   const q = query.trim().toLowerCase();
@@ -39,7 +39,7 @@ export function ArticleList() {
           />
         </label>
         <div className={styles.tagRow} role="group" aria-label="Filter by publication">
-          {(["all", ...outlets] as const).map((o) => (
+          {["all", ...outlets].map((o) => (
             <button key={o} type="button" className="chip" aria-pressed={outlet === o} onClick={() => setOutlet(o)}>
               {o === "all" ? "All outlets" : o}
               <span className="count">
@@ -66,7 +66,7 @@ export function ArticleList() {
               {visible
                 .filter((a) => a.date.startsWith(year))
                 .map((a, i) => (
-                  <li key={a.url} data-reveal style={{ "--reveal-i": i % 4 } as React.CSSProperties}>
+                  <li key={a.id} data-reveal style={{ "--reveal-i": i % 4 } as React.CSSProperties}>
                     <a href={a.url} target="_blank" rel="noopener noreferrer" className={styles.article}>
                       <span className={styles.outletMark} aria-hidden>
                         {initials(a.outlet)}

@@ -1,4 +1,4 @@
-import { getProduct, type Product } from "@/lib/catalog";
+import type { Product } from "@/lib/catalog";
 
 export type PricedOrder = {
   lines: Product[];
@@ -7,16 +7,17 @@ export type PricedOrder = {
 };
 
 /**
- * Prices a list of product IDs from the catalogue. Used by the cart for display
- * and by the checkout API as the source of truth, so a tampered request cannot
- * change what the customer is charged.
+ * Prices a list of product IDs against a catalogue. The cart uses it for display;
+ * the checkout API uses it with a catalogue freshly loaded from the database, so a
+ * tampered request can never change what the customer is charged.
  */
-export function priceItems(ids: readonly string[]): PricedOrder {
+export function priceItems(ids: readonly string[], products: readonly Product[]): PricedOrder {
+  const byId = new Map(products.map((p) => [p.id, p]));
   const lines: Product[] = [];
   const unknown: string[] = [];
 
   for (const id of new Set(ids)) {
-    const product = getProduct(id);
+    const product = byId.get(id);
     if (product) lines.push(product);
     else unknown.push(id);
   }

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { FaArrowRight, FaBookOpenReader, FaRegClock } from "react-icons/fa6";
-import { categoryLabel, COURSE_ACCESS_DAYS, type Course } from "@/data/courses";
+import { categoryLabel } from "@/data/taxonomy";
 import { courseProductId, describeAccess } from "@/lib/catalog";
+import { CourseIcon } from "@/lib/course-icons";
 import { formatKes } from "@/lib/format";
+import type { Course } from "@/lib/types";
 import { AddToCartButton } from "./AddToCartButton";
 import styles from "./courses.module.css";
 
 export function CourseCard({ course, index = 0 }: { course: Course; index?: number }) {
-  const Icon = course.icon;
   const href = `/courses/${course.slug}`;
 
   return (
@@ -18,7 +19,7 @@ export function CourseCard({ course, index = 0 }: { course: Course; index?: numb
     >
       <div className={styles.cardTop}>
         <span className="icon-tile">
-          <Icon aria-hidden />
+          <CourseIcon name={course.icon} />
         </span>
         <div className={styles.tags}>
           <span className="badge badge--accent">{categoryLabel(course.category)}</span>
@@ -33,7 +34,7 @@ export function CourseCard({ course, index = 0 }: { course: Course; index?: numb
 
       <ul role="list" className={styles.meta}>
         <li>
-          <FaRegClock aria-hidden /> {describeAccess(COURSE_ACCESS_DAYS)} access
+          <FaRegClock aria-hidden /> {describeAccess(course.accessDays)} access
         </li>
         <li>
           <FaBookOpenReader aria-hidden /> {course.topics.length} topics · online reader

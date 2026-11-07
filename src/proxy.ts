@@ -50,5 +50,5 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   // Only routes that need a session; public pages stay static and fast.
-  matcher: ["/", "/account/:path*", "/learn/:path*", "/checkout/:path*", "/api/checkout", "/api/materials/:path*"],
+  matcher: ["/", "/admin/:path*", "/account/:path*", "/learn/:path*", "/checkout/:path*", "/api/checkout", "/api/materials/:path*"],
 };

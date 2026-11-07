@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <>
-      <PageHeader title="Gallery" intro="Teaching, presentations, awards and events." />
+      <PageHeader eyebrow="Gallery" title="Moments from the work" intro="Teaching, keynotes, policy forums, awards and events." />
       <section className="section">
         <div className="container">
           <GalleryGrid />

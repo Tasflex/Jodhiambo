@@ -1,32 +1,35 @@
 import Link from "next/link";
-import { mainNav, site } from "@/data/site";
+import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { Logo } from "@/components/ui/Logo";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { mainNav, site } from "@/data/site";
 import styles from "./Footer.module.css";
 
-const shopLinks = [
+const learnLinks = [
   { href: "/courses", label: "All courses" },
   { href: "/pricing", label: "All-Access pass" },
   { href: "/learn", label: "My Learning" },
   { href: "/account", label: "My account" },
   { href: "/publications/books", label: "Books" },
-  { href: "/cart", label: "Your cart" },
 ];
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
-        <div>
-          <h2 className={styles.heading}>{site.name}</h2>
+        <div className={styles.brand}>
+          <Link href="/" className={styles.logo} aria-label="Jodhiambo home">
+            <Logo />
+          </Link>
           <p>
-            Actuary, public policy analyst and educator dedicated to advancing actuarial science and developing
-            data-driven policy solutions.
+            Actuary, public policy analyst and educator advancing actuarial science and data-driven policy across
+            Sub-Saharan Africa.
           </p>
           <SocialLinks variant="footer" />
         </div>
 
         <nav aria-label="Footer">
-          <h2 className={styles.heading}>Quick links</h2>
+          <h2 className={styles.heading}>Explore</h2>
           <ul role="list" className={styles.links}>
             {mainNav.map((item) => (
               <li key={item.href}>
@@ -39,7 +42,7 @@ export function Footer() {
         <div>
           <h2 className={styles.heading}>Learn</h2>
           <ul role="list" className={styles.links}>
-            {shopLinks.map((item) => (
+            {learnLinks.map((item) => (
               <li key={item.href}>
                 <Link href={item.href}>{item.label}</Link>
               </li>
@@ -54,13 +57,20 @@ export function Footer() {
 
         <address className={styles.contact}>
           <h2 className={styles.heading}>Contact</h2>
-          <p>
-            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
-          </p>
-          <p>
-            <a href={site.contact.phoneHref}>{site.contact.phone}</a>
-          </p>
-          <p>{site.contact.affiliation}</p>
+          <ul role="list" className={styles.links}>
+            <li>
+              <FaEnvelope aria-hidden />
+              <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+            </li>
+            <li>
+              <FaPhone aria-hidden />
+              <a href={site.contact.phoneHref}>{site.contact.phone}</a>
+            </li>
+            <li>
+              <FaLocationDot aria-hidden />
+              <span>{site.contact.affiliation}</span>
+            </li>
+          </ul>
         </address>
       </div>
 

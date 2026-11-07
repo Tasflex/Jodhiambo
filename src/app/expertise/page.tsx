@@ -13,20 +13,21 @@ export default function ExpertisePage() {
   return (
     <>
       <PageHeader
-        title="Expertise"
-        intro="Actuarial science, data analytics and public policy, from rigorous modelling to policy that works on the ground."
+        eyebrow="Expertise"
+        title="From rigorous models to policy that works"
+        intro="Actuarial science, data analytics and public policy expertise for institutions, governments and learners."
       />
 
       <section className="section" aria-labelledby="core-title">
         <div className="container">
-          <SectionTitle id="core-title" title="Core Expertise" />
+          <SectionTitle id="core-title" eyebrow="Core" title="Core expertise" />
           <ExpertiseGrid items={coreExpertise} />
         </div>
       </section>
 
       <section className="section section--alt" aria-labelledby="policy-title">
         <div className="container">
-          <SectionTitle id="policy-title" title="Public Policy Expertise" />
+          <SectionTitle id="policy-title" eyebrow="Policy" title="Public policy expertise" />
           <ExpertiseGrid items={policyExpertise} />
           <p className="text-center mt-lg">
             <Link href="/contact" className="btn">

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHeader title="About Me" intro="Actuarial Data Scientist & Public Policy Expert" />
+      <PageHeader eyebrow="About" title="Dr. Joab Onyango Odhiambo" intro="Actuarial data scientist, public policy expert and educator." />
 
       <section className="section">
         <div className={`container ${styles.layout}`}>

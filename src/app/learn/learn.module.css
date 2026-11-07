@@ -1,5 +1,5 @@
 .course {
-  border-top: 4px solid var(--c-highlight);
+  border-top: 4px solid var(--c-primary);
 }
 
 .courseTitle {
@@ -13,7 +13,7 @@
 }
 
 .courseTitle a:hover {
-  color: var(--c-accent);
+  color: var(--c-primary);
 }
 
 .back {
@@ -42,7 +42,7 @@
 }
 
 .material svg {
-  color: var(--c-highlight);
+  color: var(--c-primary);
   font-size: 1.4rem;
   flex-shrink: 0;
 }

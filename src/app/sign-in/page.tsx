@@ -19,7 +19,7 @@ export default async function SignInPage({ searchParams }: Props) {
 
   return (
     <>
-      <PageHeader title="Sign in" intro="Access your courses and All-Access pass." />
+      <PageHeader eyebrow="Student area" title="Sign in" intro="Access your courses and All-Access pass." />
       <section className="section">
         <div className="container" style={{ maxWidth: 520 }}>
           {error && (

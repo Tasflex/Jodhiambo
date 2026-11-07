@@ -33,6 +33,7 @@ export default function PricingPage() {
   return (
     <>
       <PageHeader
+        eyebrow="Pricing"
         title="All-Access Pass"
         intro={`Every course, one price. Read all ${courses.length} courses' materials for as long as your pass is active.`}
       />

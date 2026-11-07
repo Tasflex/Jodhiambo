@@ -16,6 +16,16 @@ export const metadata: Metadata = {
 
 const dateTime = new Intl.DateTimeFormat("en-GB", { dateStyle: "medium", timeZone: "Africa/Nairobi" });
 
+/** An order still pending after an hour was abandoned at Paystack; no money moved. */
+const ABANDONED_AFTER_MS = 60 * 60 * 1000;
+
+function orderStatus(status: OrderRow["status"], createdAt: string) {
+  if (status === "pending" && Date.now() - new Date(createdAt).getTime() > ABANDONED_AFTER_MS) {
+    return { key: "failed" as const, label: "Not completed" };
+  }
+  return { key: status, label: { paid: "Paid", pending: "Pending", failed: "Failed" }[status] };
+}
+
 function scopeLabel(scope: string) {
   if (scope === "all") return "All-Access Pass";
   return getCourse(scope.replace(/^course:/, ""))?.title ?? scope;
@@ -39,7 +49,7 @@ export default async function AccountPage() {
 
   return (
     <>
-      <PageHeader title="My Account" intro={user.email} />
+      <PageHeader eyebrow="Student area" title="My Account" intro={user.email} />
       <section className="section">
         <div className={`container ${styles.layout}`}>
           <div className="card">
@@ -85,16 +95,19 @@ export default async function AccountPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {orders.map((o) => (
+                    {orders.map((o) => {
+                      const status = orderStatus(o.status, o.created_at);
+                      return (
                       <tr key={o.reference}>
                         <td>{dateTime.format(new Date(o.created_at))}</td>
                         <td>{o.items.map((i) => i.title).join(", ")}</td>
                         <td>{formatKes(o.amount_kes)}</td>
                         <td>
-                          <span className={`${styles.status} ${styles[o.status]}`}>{o.status}</span>
+                          <span className={`${styles.status} ${styles[status.key]}`}>{status.label}</span>
                         </td>
                       </tr>
-                    ))}
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

@@ -21,7 +21,7 @@
 
 .lineIcon {
   font-size: 1.5rem;
-  color: var(--c-accent);
+  color: var(--c-primary);
   display: inline-flex;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .lineTitle:hover {
-  color: var(--c-accent);
+  color: var(--c-primary);
 }
 
 .linePrice {

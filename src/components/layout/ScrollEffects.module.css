@@ -1,0 +1,33 @@
+.toTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 900;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+  color: var(--c-heading);
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity var(--ease), transform var(--ease), background-color var(--ease), color var(--ease);
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.toTop:hover {
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+  color: #fff;
+}

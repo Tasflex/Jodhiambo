@@ -40,7 +40,7 @@ export default async function VerifyPage({ searchParams }: Props) {
     },
     pending: {
       icon: <FaClock aria-hidden />,
-      color: "var(--c-accent)",
+      color: "var(--c-primary)",
       title: "Payment is being confirmed",
       body: "This can take a minute for M-Pesa payments. Your access will appear in your account as soon as it is confirmed. You can safely refresh this page.",
       cta: { href: "/account", label: "View my account" },
@@ -63,12 +63,12 @@ export default async function VerifyPage({ searchParams }: Props) {
 
   return (
     <>
-      <PageHeader title="Payment status" />
+      <PageHeader eyebrow="Store" title="Payment status" />
       <section className="section">
         <div className="container">
           {result === "paid" && <ClearCart />}
           <div className="card card--center" style={{ maxWidth: 600, margin: "0 auto" }}>
-            <span className="card-icon" style={{ color: view.color, fontSize: "3rem" }}>
+            <span className="icon-tile" style={{ color: view.color, fontSize: "1.8rem", width: 72, height: 72 }}>
               {view.icon}
             </span>
             <h2>{view.title}</h2>

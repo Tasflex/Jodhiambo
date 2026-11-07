@@ -30,7 +30,7 @@ export default async function LearnCoursePage({ params }: Props) {
 
   return (
     <>
-      <PageHeader title={course.title} />
+      <PageHeader eyebrow="My Learning" title={course.title} />
       <section className="section">
         <div className="container" style={{ maxWidth: 820 }}>
           <Link href="/learn" className={styles.back}>

@@ -29,17 +29,23 @@ export function GalleryGrid() {
       </div>
 
       <ul role="list" className={styles.grid}>
-        {visible.map((item) => (
-          <li key={item.src}>
+        {visible.map((item, i) => (
+          <li
+            key={item.src}
+            className={i % 5 === 0 ? styles.tall : undefined}
+            data-reveal="zoom"
+            style={{ "--reveal-i": i % 4 } as React.CSSProperties}
+          >
             <figure className={styles.item} tabIndex={0}>
               <Image
                 src={item.src}
                 alt={item.alt}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 380px"
+                sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px"
                 className={styles.img}
               />
               <figcaption className={styles.caption}>
+                <span className={styles.cat}>{galleryCategories.find((c) => c.value === item.category)?.label}</span>
                 <strong>{item.title}</strong>
                 <span>{item.caption}</span>
               </figcaption>

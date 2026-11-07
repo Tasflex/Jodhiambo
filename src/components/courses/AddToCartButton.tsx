@@ -9,18 +9,27 @@ type Props = {
   block?: boolean;
   label?: string;
   variant?: "primary" | "secondary";
+  size?: "sm" | "md";
 };
 
-export function AddToCartButton({ productId, block = false, label = "Add to cart", variant = "primary" }: Props) {
+export function AddToCartButton({
+  productId,
+  block = false,
+  label = "Add to cart",
+  variant = "primary",
+  size = "md",
+}: Props) {
   const items = useCart();
   const hydrated = useHydrated();
   const inCart = hydrated && items.includes(productId);
-  const cls = `btn ${variant === "secondary" ? "btn--secondary" : ""} ${block ? "btn--block" : ""}`;
+  const cls = ["btn", variant === "secondary" && "btn--secondary", block && "btn--block", size === "sm" && "btn--sm"]
+    .filter(Boolean)
+    .join(" ");
 
   if (inCart) {
     return (
       <Link href="/cart" className={`${cls} btn--ghost`}>
-        <FaCheck aria-hidden /> In cart, view cart
+        <FaCheck aria-hidden /> In cart
       </Link>
     );
   }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function CartPage() {
   return (
     <>
-      <PageHeader title="Your Cart" />
+      <PageHeader eyebrow="Store" title="Your cart" />
       <section className="section">
         <div className="container">
           <CartView />

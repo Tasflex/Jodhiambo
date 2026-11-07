@@ -1,56 +1,70 @@
+/* The footer is always a dark "ink" panel, in both themes, so its colours
+   come from the --c-ink / --c-on-ink tokens rather than page colours. */
 .footer {
-  border-top: 4px solid var(--c-highlight);
-  background: var(--c-footer-bg);
-  color: var(--c-footer-text);
-  padding: 56px 0 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--c-ink);
+  color: var(--c-on-ink-muted);
+  padding: 72px 0 24px;
+  margin-top: auto;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-primary), transparent 70%);
 }
 
 .grid {
   display: grid;
-  gap: 32px;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
-  margin-bottom: 40px;
+  gap: 40px;
+  grid-template-columns: 1.6fr repeat(3, 1fr);
+  margin-bottom: 48px;
+}
+
+.brand p {
+  margin: 18px 0 22px;
+  max-width: 340px;
+}
+
+.logo {
+  color: var(--c-on-ink);
+  text-decoration: none;
 }
 
 .heading {
-  color: #fff;
-  font-size: 1.15rem;
-  position: relative;
-  padding-bottom: 10px;
+  color: var(--c-on-ink);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 18px;
 }
 
-.heading::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--c-highlight);
+.links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.footer p {
-  margin-bottom: 12px;
+.links li + li {
+  margin-top: 10px;
+}
+
+.links svg {
+  color: var(--c-primary);
+  flex-shrink: 0;
 }
 
 .footer a {
-  color: var(--c-footer-text);
+  color: var(--c-on-ink-muted);
   text-decoration: none;
   transition: color var(--ease);
 }
 
 .footer a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.links {
-  list-style: none;
-}
-
-.links li + li {
-  margin-top: 8px;
+  color: var(--c-on-ink);
 }
 
 .contact {
@@ -58,30 +72,40 @@
 }
 
 .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.bottom p {
-  margin-bottom: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 22px;
+  font-size: 0.88rem;
 }
 
 .footer .credit {
-  color: var(--c-footer-link);
-  font-weight: 600;
+  color: var(--c-on-ink);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+.footer .credit:hover {
+  color: #ff8a7d;
+}
+
+@media (max-width: 960px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .brand {
+    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 560px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .bottom {
+    flex-direction: column;
   }
 }

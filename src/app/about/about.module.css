@@ -50,7 +50,7 @@
   height: 50px;
   border-radius: 50%;
   background: var(--c-surface-alt);
-  color: var(--c-highlight);
+  color: var(--c-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;

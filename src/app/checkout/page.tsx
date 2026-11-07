@@ -15,7 +15,7 @@ export default async function CheckoutPage() {
 
   return (
     <>
-      <PageHeader title="Checkout" />
+      <PageHeader eyebrow="Store" title="Checkout" />
       <section className="section">
         <div className="container">
           <CheckoutForm email={user.email} />

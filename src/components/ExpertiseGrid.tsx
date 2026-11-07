@@ -3,9 +3,14 @@ import type { ExpertiseArea } from "@/data/expertise";
 export function ExpertiseGrid({ items }: { items: ExpertiseArea[] }) {
   return (
     <ul role="list" className="grid">
-      {items.map(({ icon: Icon, title, description }) => (
-        <li key={title} className="card card--hover card--center">
-          <span className="card-icon">
+      {items.map(({ icon: Icon, title, description }, i) => (
+        <li
+          key={title}
+          className="card card--hover card--center"
+          data-reveal
+          style={{ "--reveal-i": i % 6 } as React.CSSProperties}
+        >
+          <span className="icon-tile">
             <Icon aria-hidden />
           </span>
           <h3>{title}</h3>

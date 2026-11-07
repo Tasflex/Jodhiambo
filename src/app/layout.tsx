@@ -1,10 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ScrollEffects } from "@/components/layout/ScrollEffects";
 import { themeScript } from "@/components/layout/theme-script";
 import { site } from "@/data/site";
 import "./globals.css";
+
+// Self-hosted at build time by next/font: no requests to Google from visitors' browsers.
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-jakarta",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -25,7 +36,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#15191c" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b1220" },
   ],
 };
 
@@ -33,8 +44,8 @@ const loadAnalytics = process.env.NODE_ENV === "production" && site.gaId;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // The theme script sets data-theme before React hydrates, hence the warning suppression.
-    <html lang="en" suppressHydrationWarning>
+    // The theme script sets data-theme and .js before React hydrates, hence the warning suppression.
+    <html lang="en" className={`${inter.variable} ${jakarta.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
@@ -45,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <ScrollEffects />
 
         {loadAnalytics && (
           <>

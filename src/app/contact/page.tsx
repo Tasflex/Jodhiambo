@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHeader title="Get In Touch" />
+      <PageHeader eyebrow="Contact" title="Get in touch" intro="Speaking engagements, training, research collaborations and consulting." />
       <section className="section">
         <div className={`container ${styles.layout}`}>
           <div>

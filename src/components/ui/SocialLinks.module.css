@@ -19,7 +19,7 @@
 }
 
 .link:hover {
-  background: var(--c-accent);
+  background: var(--c-primary);
   color: #fff;
   transform: translateY(-4px);
 }
@@ -34,5 +34,5 @@
 }
 
 .footer .link:hover {
-  background: var(--c-accent);
+  background: var(--c-primary);
 }

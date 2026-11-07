@@ -57,7 +57,7 @@ export function ContactForm() {
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <button type="submit" className="btn btn--secondary" disabled={status.kind === "sending"}>
+      <button type="submit" className="btn" disabled={status.kind === "sending"}>
         {status.kind === "sending" ? "Sending…" : "Send message"}
       </button>
 

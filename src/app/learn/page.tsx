@@ -19,7 +19,7 @@ export default async function LearnPage() {
 
   return (
     <>
-      <PageHeader title="My Learning" intro="Your courses. Materials open in the online reader." />
+      <PageHeader eyebrow="Student area" title="My Learning" intro="Your courses. Materials open in the online reader." />
       <section className="section">
         <div className="container">
           {available.length === 0 ? (
@@ -36,7 +36,7 @@ export default async function LearnPage() {
                 const Icon = course.icon;
                 return (
                   <li key={course.slug} className={`card card--hover ${styles.course}`}>
-                    <span className="card-icon">
+                    <span className="icon-tile">
                       <Icon aria-hidden />
                     </span>
                     <h2 className={styles.courseTitle}>

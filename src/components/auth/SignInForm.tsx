@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Field } from "@/components/ui/Field";
+import { NEXT_COOKIE } from "@/lib/safe-redirect";
 import { fieldErrors, signInSchema } from "@/lib/schemas";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
@@ -20,12 +21,15 @@ export function SignInForm({ next }: { next: string }) {
     setErrors({});
     setState("sending");
 
+    // Remember the destination in a short-lived cookie rather than the redirect URL
+    // (see NEXT_COOKIE), so the redirect matches Supabase's allow-list exactly.
+    const secure = window.location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = `${NEXT_COOKIE}=${encodeURIComponent(next)}; Path=/; Max-Age=3600; SameSite=Lax${secure}`;
+
     const supabase = createSupabaseBrowserClient();
-    const redirect = new URL("/auth/callback", window.location.origin);
-    redirect.searchParams.set("next", next);
     const { error } = await supabase.auth.signInWithOtp({
       email: parsed.data.email,
-      options: { emailRedirectTo: redirect.toString() },
+      options: { emailRedirectTo: new URL("/auth/callback", window.location.origin).toString() },
     });
 
     if (error) {

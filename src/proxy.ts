@@ -6,6 +6,25 @@ import { NextResponse, type NextRequest } from "next/server";
  * always see a valid session. (Next.js 16 renamed middleware.ts to proxy.ts.)
  */
 export async function proxy(request: NextRequest) {
+  const { pathname, searchParams } = request.nextUrl;
+
+  // If Supabase falls back to the Site URL (e.g. the redirect URL isn't allow-listed),
+  // the sign-in code lands on the home page. Send it on to the callback that handles it.
+  if (pathname === "/") {
+    if (searchParams.has("code")) {
+      const callback = request.nextUrl.clone();
+      callback.pathname = "/auth/callback";
+      return NextResponse.redirect(callback);
+    }
+    // An expired or already-used link: show the sign-in page with a clear message.
+    if (searchParams.has("error_code")) {
+      const signIn = new URL("/sign-in", request.nextUrl);
+      signIn.searchParams.set("error", "link");
+      return NextResponse.redirect(signIn);
+    }
+    return NextResponse.next();
+  }
+
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) return NextResponse.next();
@@ -31,5 +50,5 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   // Only routes that need a session; public pages stay static and fast.
-  matcher: ["/account/:path*", "/learn/:path*", "/checkout/:path*", "/api/checkout", "/api/materials/:path*"],
+  matcher: ["/", "/account/:path*", "/learn/:path*", "/checkout/:path*", "/api/checkout", "/api/materials/:path*"],
 };

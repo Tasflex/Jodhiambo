@@ -17,9 +17,9 @@
   flex-wrap: wrap;
   gap: 8px;
   padding: 8px 12px;
-  background: #2c3e50;
+  background: var(--c-ink);
   color: #fff;
-  border-bottom: 3px solid var(--c-highlight);
+  border-bottom: 3px solid var(--c-primary);
 }
 
 .group {

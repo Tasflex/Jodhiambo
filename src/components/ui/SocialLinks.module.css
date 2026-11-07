@@ -1,0 +1,38 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--c-surface-alt);
+  color: var(--c-heading);
+  text-decoration: none;
+  transition: background-color var(--ease), color var(--ease), transform var(--ease);
+}
+
+.link:hover {
+  background: var(--c-accent);
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.footer {
+  margin-top: 16px;
+}
+
+.footer .link {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.footer .link:hover {
+  background: var(--c-accent);
+}

@@ -1,0 +1,40 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.lead {
+  color: var(--c-text-muted);
+  margin-bottom: 28px;
+}
+
+.details {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.details li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.details svg {
+  color: var(--c-accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

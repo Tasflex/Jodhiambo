@@ -1,0 +1,57 @@
+.course {
+  border-top: 4px solid var(--c-highlight);
+}
+
+.courseTitle {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.courseTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.courseTitle a:hover {
+  color: var(--c-accent);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.materials {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.material {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  color: var(--c-heading);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.material svg {
+  color: var(--c-highlight);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.readerSection {
+  padding-top: 32px;
+}
+
+.readerTitle {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin-bottom: 20px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "jodhiambo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dr. Joab Odhiambo — personal site, publications and e-learning store",
+  "scripts": {
+    "copy-pdf-worker": "node scripts/copy-pdf-worker.mjs",
+    "predev": "npm run copy-pdf-worker",
+    "dev": "next dev",
+    "prebuild": "npm run copy-pdf-worker",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
+    "next": "16.4.5",
+    "pdfjs-dist": "^6.5.438",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-icons": "^5.7.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.5",
+    "typescript": "^5.9.3"
+  }
+}

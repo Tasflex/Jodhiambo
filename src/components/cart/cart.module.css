@@ -1,0 +1,185 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.lines {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+.lineIcon {
+  font-size: 1.5rem;
+  color: var(--c-accent);
+  display: inline-flex;
+}
+
+.lineTitle {
+  font-weight: 600;
+  color: var(--c-heading);
+  text-decoration: none;
+}
+
+.lineTitle:hover {
+  color: var(--c-accent);
+}
+
+.linePrice {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: var(--c-text-muted);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--ease), color var(--ease);
+}
+
+.remove:hover {
+  background: var(--c-surface-alt);
+  color: var(--c-danger);
+}
+
+.summary {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.summary h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.summary dl {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.summary dl div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary dd {
+  font-weight: 600;
+}
+
+.total {
+  border-top: 1px solid var(--c-border);
+  padding-top: 10px;
+  font-size: 1.15rem;
+}
+
+.total dd {
+  color: var(--c-heading);
+  font-weight: 700;
+}
+
+.summaryLines {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.summaryLines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.continue {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.empty {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.empty h2 {
+  margin-bottom: 8px;
+}
+
+.empty p {
+  margin-bottom: 24px;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: var(--c-text-muted);
+  margin-top: 14px;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .line {
+    grid-template-columns: auto 1fr auto;
+  }
+  .linePrice {
+    grid-column: 2;
+  }
+  .remove {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+
+.muted {
+  color: var(--c-text-muted);
+}
+
+.bigTotal {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-heading);
+  margin-bottom: 18px;
+}
+
+.emptyCtas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.summary .btn svg {
+  font-size: 0.9em;
+}

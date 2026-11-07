@@ -1,0 +1,105 @@
+.viewer {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--c-surface);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.toolbar {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #2c3e50;
+  color: #fff;
+  border-bottom: 3px solid var(--c-highlight);
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbar button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.toolbar button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.pageInfo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.pageInfo input {
+  width: 56px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font: inherit;
+  text-align: center;
+}
+
+.zoom {
+  min-width: 48px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.frame {
+  overflow: auto;
+  max-height: calc(100dvh - var(--header-h) - 120px);
+  min-height: 60vh;
+  padding: 16px;
+  background: #525659;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.canvas {
+  display: block;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  pointer-events: none; /* no "Save image as…" on the page itself */
+}
+
+.message {
+  color: #fff;
+  align-self: center;
+}
+
+/* Printing the reader produces a blank page. */
+@media print {
+  .viewer {
+    display: none !important;
+  }
+}

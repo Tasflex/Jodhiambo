@@ -1,0 +1,157 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: var(--header-h);
+  background: var(--c-surface);
+  border-top: 3px solid var(--c-highlight);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: background-color var(--ease);
+}
+
+.bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--c-brand);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--c-highlight);
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+.link {
+  position: relative;
+  color: var(--c-text);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: var(--c-accent);
+  transition: width var(--ease);
+}
+
+.link:hover,
+.link[aria-current="page"] {
+  color: var(--c-accent);
+}
+
+.link:hover::after,
+.link[aria-current="page"]::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--c-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--ease), color var(--ease);
+}
+
+.iconBtn:hover {
+  background: var(--c-surface-alt);
+  color: var(--c-accent);
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--c-highlight);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.menuBtn {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .menuBtn {
+    display: inline-flex;
+  }
+
+  .nav {
+    margin-left: auto;
+    order: 2;
+  }
+
+  .actions {
+    order: 3;
+  }
+
+  .links {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    height: calc(100dvh - var(--header-h));
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 28px;
+    padding-top: 40px;
+    background: var(--c-surface);
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s;
+  }
+
+  .links.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .link {
+    font-size: 1.15rem;
+  }
+}
